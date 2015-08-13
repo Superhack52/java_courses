@@ -3,6 +3,9 @@ package ru.lesson.lessons;
 public class ArgRunner {
 
     public static void main(String[] arg) {
+        /**
+         * Складывает 2 введыенный цифры
+         */
         System.out.println("Calculate...");
         if (arg.length == 2) {
             int first = Integer.valueOf(arg[0]);
