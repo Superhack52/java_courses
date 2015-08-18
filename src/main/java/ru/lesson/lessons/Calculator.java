@@ -18,15 +18,19 @@ public class Calculator {
     }
 
     /**
-     * Вычиляем деление.
+     * Вычисляем деление
      *
-     * @param args входящие агрументы.
+     * @param args выходящие аргументы
+     * @throws UserException Если аргументов нет, выкидываю исключения
      */
-    public void div(int... args) {
+    public void div(int... args) throws UserException {
         if (args.length > 0) {
-
+            this.result = args[0];
+            for (int params : args) {
+                this.result = params;
+            }
         } else {
-
+            throw new UserException("You mast enter args");
         }
     }
 
