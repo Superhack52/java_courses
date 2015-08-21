@@ -27,7 +27,10 @@ public class Calculator {
         if (args.length > 0) {
             this.result = args[0];
             for (int params : args) {
-                this.result = params;
+                if (params == 0) {
+                    throw new IllegalArgumentException("You try div by 0. Please change arg!");
+                }
+                this.result /= params;
             }
         } else {
             throw new UserException("You mast enter args");
